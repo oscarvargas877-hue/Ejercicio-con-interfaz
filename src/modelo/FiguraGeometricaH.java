@@ -55,6 +55,7 @@ public class FiguraGeometricaH {
     public void setPerimetro(double perimetro) {
         this.perimetro = perimetro;
     }
+    
 
     @Override
     public String toString() {

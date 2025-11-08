@@ -9,17 +9,18 @@ package modelo;
  * @author hp
  */
 public class Cuadrado implements FiguraGeometrica{
+    //atributos
     private int idCuadrado;
     private double lado;
-
+    //constructor vacio
     public Cuadrado() {
     }
-
+    //Constructor 
     public Cuadrado(int idCuadrado, double lado) {
         this.idCuadrado = idCuadrado;
         this.lado = lado;
     }
-
+    //Metodo set y get
     public int getIdCuadrado() {
         return idCuadrado;
     }
@@ -35,7 +36,7 @@ public class Cuadrado implements FiguraGeometrica{
     public void setLado(double lado) {
         this.lado = lado;
     }
-
+    //sobreescribir 
     @Override
     public String toString() {
         return "Cuadrado"+"\n"+

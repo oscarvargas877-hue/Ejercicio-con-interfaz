@@ -4,8 +4,6 @@
  */
 package modelo;
 
-import java.util.Date;
-
 /**
  *
  * @author hp
@@ -124,9 +122,9 @@ public class Persona implements Humano,Ubicacion{
          }
 
     @Override
-    public String obtenerDireccion() {
-            return "La dirección es:"+getDireccion()+this.direccion+direccion;
-          }
+        public String obtenerDireccion() {
+            return "La dirección es: " + getDireccion();
+}
    
     
 }

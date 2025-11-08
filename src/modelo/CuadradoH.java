@@ -18,12 +18,19 @@ public class CuadradoH extends FiguraGeometricaH{
     public CuadradoH(int idCuadrado, double lado) {
         this.idCuadrado = idCuadrado;
         this.lado = lado;
+        // Calcular y actualizar los valores del padre
+        this.setArea(calcularArea());
+        this.setPerimetro(calcularPerimetro());
     }
 
     public CuadradoH(int idCuadrado, double lado, int idFiguraGeometrica, String nombre, double area, double perimetro) {
         super(idFiguraGeometrica, nombre, area, perimetro);
         this.idCuadrado = idCuadrado;
         this.lado = lado;
+        // Calcular y actualizar los valores del padre
+        this.setArea(calcularArea());
+        this.setPerimetro(calcularPerimetro());
+      
     }
 
     
@@ -41,16 +48,24 @@ public class CuadradoH extends FiguraGeometricaH{
 
     public void setLado(double lado) {
         this.lado = lado;
+        // Recalcular y actualizar cuando se cambia el lado
+        this.setArea(calcularArea());
+        this.setPerimetro(calcularPerimetro());
+    }
+   // Métodos de lógica
+    public double calcularArea() {
+        return lado * lado;
     }
 
+    public double calcularPerimetro() {
+        return 4 * lado;
+    }
+    
+    // Perimetro
     @Override
     public String toString() {
-        return "Id:"+getIdFiguraGeometrica()+"\n"+
-                "Nombre:"+getNombre()+"\n"+
-                "Área:"+getArea()+"\n"+
-                "Perímetro:"+getPerimetro()+"\n"+
-                "IdCuadrado:"+idCuadrado+"\n"+
-                "Lado:"+lado;}
+        return super.toString() +"\n"+ "Id Cuadrado: "+ idCuadrado+"\n"+ "Lado: " + lado;
+    }
 
    
 
