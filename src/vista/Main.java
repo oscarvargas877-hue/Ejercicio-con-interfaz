@@ -7,6 +7,7 @@ package vista;
 //import modelo.Cuadrado;
 import modelo.CuadradoH;
 import modelo.RectanguloH;
+import modelo.TrianguloH;
 //import modelo.FiguraGeometricaH;
 //import modelo.Persona;
 //import modelo.Socio;
@@ -72,8 +73,14 @@ public class Main {
                 10);
         
         System.out.println(rectangulo1.toString());
+        System.out.println("\n");
         
- 
+        
+        //TRIANGULO EJERCICIO CON INTERFAZ
+        TrianguloH triangulo1 = new TrianguloH(1,4,5,6,100,"Triangulo",0,0);
+        
+        triangulo1.calcular();
+        System.out.println(triangulo1.toString());
     
     }
 }
